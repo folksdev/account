@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'account:latest'
+    build:
+      context: .
+    container_name: account
+    ports:
+      - 9090:8080
