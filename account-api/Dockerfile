@@ -4,7 +4,8 @@ COPY pom.xml mvnw ./
 COPY .mvn .mvn
 RUN ./mvnw dependency:resolve
 
-co
+COPY src src
+RUN ./mvnw package
 
 FROM openjdk:11
 WORKDIR account-api
