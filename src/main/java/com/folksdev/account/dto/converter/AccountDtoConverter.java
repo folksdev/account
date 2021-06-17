@@ -1,9 +1,11 @@
-package com.folksdev.account.dto;
+package com.folksdev.account.dto.converter;
 
+import com.folksdev.account.dto.AccountDto;
 import com.folksdev.account.model.Account;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -22,7 +24,7 @@ public class AccountDtoConverter {
         return new AccountDto(from.getId(),
                 from.getBalance(),
                 from.getCreationDate(),
-                customerDtoConverter.convertToAccountCustomer(from.getCustomer()),
+                customerDtoConverter.convertToAccountCustomer(Optional.ofNullable(from.getCustomer())),
                 Objects.requireNonNull(from.getTransaction())
                         .stream()
                         .map(transactionDtoConverter::convert)

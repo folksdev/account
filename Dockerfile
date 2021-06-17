@@ -8,6 +8,6 @@ COPY src src
 RUN ./mvnw package
 
 FROM openjdk:11
-WORKDIR account
-COPY --from=build target/*.jar account.jar
-ENTRYPOINT ["java", "-jar", "account.jar"]
+WORKDIR account-api
+COPY --from=build target/*.jar account-api.jar
+ENTRYPOINT ["java", "-jar", "account-api.jar"]

@@ -2,9 +2,9 @@ version: '3.9'
 
 services:
   app:
-    image: 'account:latest'
+    image: 'account-api:latest'
     build:
       context: .
-    container_name: account
+    container_name: account-api
     ports:
       - 9090:8080

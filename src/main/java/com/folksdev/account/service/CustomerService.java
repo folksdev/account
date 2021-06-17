@@ -1,7 +1,7 @@
 package com.folksdev.account.service;
 
 import com.folksdev.account.dto.CustomerDto;
-import com.folksdev.account.dto.CustomerDtoConverter;
+import com.folksdev.account.dto.converter.CustomerDtoConverter;
 import com.folksdev.account.exception.CustomerNotFoundException;
 import com.folksdev.account.model.Customer;
 import com.folksdev.account.repository.CustomerRepository;
@@ -13,7 +13,8 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final CustomerDtoConverter converter;
 
-    public CustomerService(CustomerRepository customerRepository, CustomerDtoConverter converter) {
+    public CustomerService(CustomerRepository customerRepository,
+                           CustomerDtoConverter converter) {
         this.customerRepository = customerRepository;
         this.converter = converter;
     }
