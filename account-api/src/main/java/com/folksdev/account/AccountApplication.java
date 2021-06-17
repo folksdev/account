@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 
 import java.time.Clock;
 
-
 @SpringBootApplication
 public class AccountApplication implements CommandLineRunner {
 
@@ -46,7 +45,11 @@ public class AccountApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args)  {
 		Customer customer = customerRepository.save(new Customer("Cagri", "Dursun"));
+		Customer customer2 = customerRepository.save(new Customer("Myhosh", "Our hos"));
+
 		System.out.println(customer);
+		System.out.println(customer2);
+
 	}
 
 }

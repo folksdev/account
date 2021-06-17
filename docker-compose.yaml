@@ -2,9 +2,12 @@ version: '3.9'
 
 services:
   app:
-    image: 'account-api:latest'
-    build:
-      context: .
+    image: 'cagridursun/account-api:1.0'
     container_name: account-api
     ports:
-      - 9090:8080
+      - 8080:8080
+  fe:
+    image: 'cagridursun/account-fe:1.0'
+    container_name: account-fe
+    ports:
+      - 3000:3000

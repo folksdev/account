@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Node JS ###
+node_modules/
+.idea/
+account-fe/.idea/
+account-fe/node_modules/
