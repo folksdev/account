@@ -19,6 +19,7 @@ class Customer extends Component {
         this.setState({customers: body});
     }
 
+
     render() {
         const {customers} = this.state;
         return (

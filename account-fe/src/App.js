@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import Customer from "./Customer";
 import Account from "./Account";
 
@@ -20,3 +18,5 @@ class App extends Component {
 }
 
 export default App;
+
+
